@@ -43,28 +43,28 @@ innerInitialize(_ba);
 RDebugUtils.currentModule="abilityitem";
 if (Debug.shouldDelegate(ba, "initialize", false))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba}));}
-RDebugUtils.currentLine=4915200;
- //BA.debugLineNum = 4915200;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=4915202;
- //BA.debugLineNum = 4915202;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1376256;
+ //BA.debugLineNum = 1376256;BA.debugLine="Public Sub Initialize";
+RDebugUtils.currentLine=1376258;
+ //BA.debugLineNum = 1376258;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals(b4a.example.abilityitem __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="abilityitem";
-RDebugUtils.currentLine=4849664;
- //BA.debugLineNum = 4849664;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=4849665;
- //BA.debugLineNum = 4849665;BA.debugLine="Public ability As ability";
+RDebugUtils.currentLine=1310720;
+ //BA.debugLineNum = 1310720;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=1310721;
+ //BA.debugLineNum = 1310721;BA.debugLine="Public ability As ability";
 _ability = new b4a.example.ability();
-RDebugUtils.currentLine=4849666;
- //BA.debugLineNum = 4849666;BA.debugLine="Public is_hidden As Boolean";
+RDebugUtils.currentLine=1310722;
+ //BA.debugLineNum = 1310722;BA.debugLine="Public is_hidden As Boolean";
 _is_hidden = false;
-RDebugUtils.currentLine=4849667;
- //BA.debugLineNum = 4849667;BA.debugLine="Public slot As Int";
+RDebugUtils.currentLine=1310723;
+ //BA.debugLineNum = 1310723;BA.debugLine="Public slot As Int";
 _slot = 0;
-RDebugUtils.currentLine=4849668;
- //BA.debugLineNum = 4849668;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1310724;
+ //BA.debugLineNum = 1310724;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -13,9 +13,10 @@ Module2=abilityItem
 Module3=form
 Module4=pokemon_ditto
 Module5=Starter
+Module6=Tarea
 NumberOfFiles=1
 NumberOfLibraries=5
-NumberOfModules=5
+NumberOfModules=6
 Version=12.2
 @EndOfDesignText@
 #Region  Project Attributes 
@@ -124,4 +125,42 @@ Public Sub GetAbilities(table As List) As List
 		lst.Add(a)
 	Next
 	Return lst	
+End Sub
+
+Private Sub Button2_Click
+	Dim j As HttpJob
+	j.Initialize("", Me)
+	
+	j.Download("https://jsonplaceholder.typicode.com/todos")
+	Wait For (j) JobDone( respuesta As HttpJob)
+	If respuesta.Success Then
+		Log( respuesta.GetString)
+		Dim json As String = respuesta.GetString
+		Dim jsonParser As JSONParser
+		jsonParser.Initialize(json)
+		
+		Dim datos As List = GetTareas( jsonParser.NextArray() )
+		For Each t As Tarea In datos
+			Log( t.title)
+			Log( t.userId )
+			Log( t.completed )
+		Next
+	Else
+		xui.MsgboxAsync(respuesta.ErrorMessage, "Sucedio un error")
+	End If
+End Sub
+
+Private Sub GetTareas( tabla As List) As List
+	Dim lst As List : lst.initialize
+	Dim m As Map 
+	For i = 0 To tabla.Size -1
+		Dim t As Tarea : t.initialize
+		m = tabla.Get(i)
+		t.id = m.Get("id")
+		t.userId = m.Get("userId")
+		t.title = m.Get("title")
+		t.completed = m.Get("completed")
+		lst.Add(t)
+	Next
+	Return lst
 End Sub

@@ -44,31 +44,31 @@ innerInitialize(_ba);
 RDebugUtils.currentModule="pokemon_ditto";
 if (Debug.shouldDelegate(ba, "initialize", false))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba}));}
-RDebugUtils.currentLine=3407872;
- //BA.debugLineNum = 3407872;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=3407874;
- //BA.debugLineNum = 3407874;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1114112;
+ //BA.debugLineNum = 1114112;BA.debugLine="Public Sub Initialize";
+RDebugUtils.currentLine=1114114;
+ //BA.debugLineNum = 1114114;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals(b4a.example.pokemon_ditto __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="pokemon_ditto";
-RDebugUtils.currentLine=3342336;
- //BA.debugLineNum = 3342336;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=3342337;
- //BA.debugLineNum = 3342337;BA.debugLine="Public abilities As List";
+RDebugUtils.currentLine=1048576;
+ //BA.debugLineNum = 1048576;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=1048577;
+ //BA.debugLineNum = 1048577;BA.debugLine="Public abilities As List";
 _abilities = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=3342338;
- //BA.debugLineNum = 3342338;BA.debugLine="Public base_experience As Int";
+RDebugUtils.currentLine=1048578;
+ //BA.debugLineNum = 1048578;BA.debugLine="Public base_experience As Int";
 _base_experience = 0;
-RDebugUtils.currentLine=3342339;
- //BA.debugLineNum = 3342339;BA.debugLine="Public forms As List";
+RDebugUtils.currentLine=1048579;
+ //BA.debugLineNum = 1048579;BA.debugLine="Public forms As List";
 _forms = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=3342340;
- //BA.debugLineNum = 3342340;BA.debugLine="Public height As Int";
+RDebugUtils.currentLine=1048580;
+ //BA.debugLineNum = 1048580;BA.debugLine="Public height As Int";
 _height = 0;
-RDebugUtils.currentLine=3342341;
- //BA.debugLineNum = 3342341;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1048581;
+ //BA.debugLineNum = 1048581;BA.debugLine="End Sub";
 return "";
 }
 }

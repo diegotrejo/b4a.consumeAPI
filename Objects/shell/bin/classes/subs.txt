@@ -1,10 +1,11 @@
 b4a.example
 0
-5
-ability
-pokemon_ditto
+6
 form
+pokemon_ditto
+ability
 abilityitem
+tarea
 httpjob
 1
 httpjob
@@ -20,7 +21,7 @@ main,activity_resume,0,0,29,31
 
 
 
-main,button1_click,0,1,37,78
+main,button1_click,0,0,37,78
 ,xui,httputils2service,tempfolder
 
 httpjob,initialize,httpjob,download,httpjob,getstring,pokemon_ditto,initialize,,getforms,,getabilities,httpjob,release,httpjob,addscheme,httpjob,getstring2,form,initialize,abilityitem,initialize,ability,initialize
@@ -32,6 +33,14 @@ main,getabilities,0,0,92,107
 
 
 abilityitem,initialize,ability,initialize
+main,button2_click,0,0,109,130
+,xui,httputils2service,tempfolder
+
+httpjob,initialize,httpjob,download,httpjob,getstring,,gettareas,httpjob,addscheme,httpjob,getstring2,tarea,initialize
+main,gettareas,0,0,132,145
+
+
+tarea,initialize
 main,globals,0,1,21,23
 
 
@@ -177,6 +186,14 @@ form,initialize,0,0,7,9
 
 
 form,class_globals,0,0,1,4
+
+
+
+tarea,initialize,0,0,9,11
+
+
+
+tarea,class_globals,0,0,1,6
 
 
 
