@@ -1,0 +1,127 @@
+﻿Build1=Default,b4a.example
+File1=Layout.bal
+FileGroup1=Default Group
+Group=Default Group
+Library1=core
+Library2=okhttp
+Library3=okhttputils2
+Library4=xui
+Library5=json
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="31"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=ability
+Module2=abilityItem
+Module3=form
+Module4=pokemon_ditto
+Module5=Starter
+NumberOfFiles=1
+NumberOfLibraries=5
+NumberOfModules=5
+Version=12.2
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("Layout")
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub Button1_Click
+	xui.MsgboxAsync("Hello world!", "B4X")
+	
+	Dim j As HttpJob
+	j.Initialize("", Me)
+	
+	j.Download("https://pokeapi.co/api/v2/pokemon/ditto")
+	Wait For (j) JobDone(j1 As HttpJob)
+	If j1.Success Then
+		Log( j1.GetString)
+		Dim json As String = j1.GetString
+		
+		Dim jsonParser As JSONParser
+		jsonParser.Initialize(json)
+		
+		Dim map As Map = jsonParser.NextObject
+		Dim res As pokemon_ditto : res.initialize()
+
+		res.base_experience = map.Get("base_experience")
+		res.height = map.Get("height")
+		res.forms = GetForms( map.Get("forms") )
+		res.abilities = GetAbilities( map.Get("abilities") )
+
+		Log(res.base_experience)
+		Log(res.height)
+		For Each f As form In res.forms
+			Log("     " & f.name)
+			Log("     " & f.url)
+		Next
+		For Each a As abilityItem In res.abilities
+			Log("     " & a.is_hidden)
+			Log("     " & a.slot)
+			Log("     " & a.ability.name)
+			Log("     " & a.ability.url)
+		Next
+
+	Else
+		xui.MsgboxAsync(j1.ErrorMessage, "Sucedio un error")
+	End If
+	
+	j.Release
+End Sub
+
+Public Sub GetForms( table As List) As List
+	Dim lst As List : lst.initialize
+	For i = 0 To table.Size-1
+		Dim f As form :  f.Initialize
+		Dim m As Map = table.Get(i)
+		f.name = m.Get("name")
+		f.url = m.Get("url")
+		lst.Add(f)
+	Next
+	Return lst
+End Sub
+
+Public Sub GetAbilities(table As List) As List
+	Dim lst As List : lst.initialize
+	For i = 0 To table.Size-1
+		Dim a As abilityItem :  a.Initialize
+		Dim m As Map = table.Get(i)
+		a.is_hidden = m.Get("is_hidden")
+		a.slot = m.Get("slot")
+		
+		Dim m2 As Map = m.Get("ability")
+		a.ability.Initialize
+		a.ability.name = m2.Get("name")
+		a.ability.url = m2.Get("url")
+		lst.Add(a)
+	Next
+	Return lst	
+End Sub
