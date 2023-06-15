@@ -147,7 +147,7 @@ case 3:
 this.state = 4;
  BA.debugLineNum = 46;BA.debugLine="Log( j1.GetString)";
 Debug.ShouldStop(8192);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","3327689",_j1.runClassMethod (b4a.example.httpjob.class, "_getstring" /*RemoteObject*/ ),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5327689",_j1.runClassMethod (b4a.example.httpjob.class, "_getstring" /*RemoteObject*/ ),0);
  BA.debugLineNum = 47;BA.debugLine="Dim json As String = j1.GetString";
 Debug.ShouldStop(16384);
 _json = _j1.runClassMethod (b4a.example.httpjob.class, "_getstring" /*RemoteObject*/ );Debug.locals.put("json", _json);Debug.locals.put("json", _json);
@@ -181,10 +181,10 @@ Debug.ShouldStop(33554432);
 _res.setField ("_abilities" /*RemoteObject*/ ,_getabilities(RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.collections.List"), _map.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("abilities")))))));
  BA.debugLineNum = 60;BA.debugLine="Log(res.base_experience)";
 Debug.ShouldStop(134217728);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","3327703",BA.NumberToString(_res.getField(true,"_base_experience" /*RemoteObject*/ )),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5327703",BA.NumberToString(_res.getField(true,"_base_experience" /*RemoteObject*/ )),0);
  BA.debugLineNum = 61;BA.debugLine="Log(res.height)";
 Debug.ShouldStop(268435456);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","3327704",BA.NumberToString(_res.getField(true,"_height" /*RemoteObject*/ )),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5327704",BA.NumberToString(_res.getField(true,"_height" /*RemoteObject*/ )),0);
  BA.debugLineNum = 62;BA.debugLine="For Each f As form In res.forms";
 Debug.ShouldStop(536870912);
 if (true) break;
@@ -219,10 +219,10 @@ case 6:
 this.state = 16;
  BA.debugLineNum = 63;BA.debugLine="Log(\"     \" & f.name)";
 Debug.ShouldStop(1073741824);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","3327706",RemoteObject.concat(RemoteObject.createImmutable("     "),_f.getField(true,"_name" /*RemoteObject*/ )),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5327706",RemoteObject.concat(RemoteObject.createImmutable("     "),_f.getField(true,"_name" /*RemoteObject*/ )),0);
  BA.debugLineNum = 64;BA.debugLine="Log(\"     \" & f.url)";
 Debug.ShouldStop(-2147483648);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","3327707",RemoteObject.concat(RemoteObject.createImmutable("     "),_f.getField(true,"_url" /*RemoteObject*/ )),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5327707",RemoteObject.concat(RemoteObject.createImmutable("     "),_f.getField(true,"_url" /*RemoteObject*/ )),0);
  if (true) break;
 if (true) break;
 Debug.locals.put("f", _f);
@@ -260,16 +260,16 @@ case 9:
 this.state = 18;
  BA.debugLineNum = 67;BA.debugLine="Log(\"     \" & a.is_hidden)";
 Debug.ShouldStop(4);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","3327710",RemoteObject.concat(RemoteObject.createImmutable("     "),_a.getField(true,"_is_hidden" /*RemoteObject*/ )),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5327710",RemoteObject.concat(RemoteObject.createImmutable("     "),_a.getField(true,"_is_hidden" /*RemoteObject*/ )),0);
  BA.debugLineNum = 68;BA.debugLine="Log(\"     \" & a.slot)";
 Debug.ShouldStop(8);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","3327711",RemoteObject.concat(RemoteObject.createImmutable("     "),_a.getField(true,"_slot" /*RemoteObject*/ )),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5327711",RemoteObject.concat(RemoteObject.createImmutable("     "),_a.getField(true,"_slot" /*RemoteObject*/ )),0);
  BA.debugLineNum = 69;BA.debugLine="Log(\"     \" & a.ability.name)";
 Debug.ShouldStop(16);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","3327712",RemoteObject.concat(RemoteObject.createImmutable("     "),_a.getField(false,"_ability" /*RemoteObject*/ ).getField(true,"_name" /*RemoteObject*/ )),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5327712",RemoteObject.concat(RemoteObject.createImmutable("     "),_a.getField(false,"_ability" /*RemoteObject*/ ).getField(true,"_name" /*RemoteObject*/ )),0);
  BA.debugLineNum = 70;BA.debugLine="Log(\"     \" & a.ability.url)";
 Debug.ShouldStop(32);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","3327713",RemoteObject.concat(RemoteObject.createImmutable("     "),_a.getField(false,"_ability" /*RemoteObject*/ ).getField(true,"_url" /*RemoteObject*/ )),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5327713",RemoteObject.concat(RemoteObject.createImmutable("     "),_a.getField(false,"_ability" /*RemoteObject*/ ).getField(true,"_url" /*RemoteObject*/ )),0);
  if (true) break;
 if (true) break;
 
@@ -391,7 +391,7 @@ case 3:
 this.state = 4;
  BA.debugLineNum = 116;BA.debugLine="Log( respuesta.GetString)";
 Debug.ShouldStop(524288);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","33801095",_respuesta.runClassMethod (b4a.example.httpjob.class, "_getstring" /*RemoteObject*/ ),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5524295",_respuesta.runClassMethod (b4a.example.httpjob.class, "_getstring" /*RemoteObject*/ ),0);
  BA.debugLineNum = 117;BA.debugLine="Dim json As String = respuesta.GetString";
 Debug.ShouldStop(1048576);
 _json = _respuesta.runClassMethod (b4a.example.httpjob.class, "_getstring" /*RemoteObject*/ );Debug.locals.put("json", _json);Debug.locals.put("json", _json);
@@ -439,13 +439,13 @@ case 6:
 this.state = 13;
  BA.debugLineNum = 123;BA.debugLine="Log( t.title)";
 Debug.ShouldStop(67108864);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","33801102",_t.getField(true,"_title" /*RemoteObject*/ ),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5524302",_t.getField(true,"_title" /*RemoteObject*/ ),0);
  BA.debugLineNum = 124;BA.debugLine="Log( t.userId )";
 Debug.ShouldStop(134217728);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","33801103",BA.NumberToString(_t.getField(true,"_userid" /*RemoteObject*/ )),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5524303",BA.NumberToString(_t.getField(true,"_userid" /*RemoteObject*/ )),0);
  BA.debugLineNum = 125;BA.debugLine="Log( t.completed )";
 Debug.ShouldStop(268435456);
-parent.mostCurrent.__c.runVoidMethod ("LogImpl","33801104",BA.ObjectToString(_t.getField(true,"_completed" /*RemoteObject*/ )),0);
+parent.mostCurrent.__c.runVoidMethod ("LogImpl","5524304",BA.ObjectToString(_t.getField(true,"_completed" /*RemoteObject*/ )),0);
  if (true) break;
 if (true) break;
 
@@ -482,6 +482,25 @@ finally {
 			Debug.PopSubsStack();
 		}}
 }
+public static RemoteObject  _button3_click() throws Exception{
+try {
+		Debug.PushSubsStack("Button3_Click (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,147);
+if (RapidSub.canDelegate("button3_click")) { return b4a.example.main.remoteMe.runUserSub(false, "main","button3_click");}
+ BA.debugLineNum = 147;BA.debugLine="Private Sub Button3_Click";
+Debug.ShouldStop(262144);
+ BA.debugLineNum = 148;BA.debugLine="StartActivity( CrudPaises)";
+Debug.ShouldStop(524288);
+main.mostCurrent.__c.runVoidMethod ("StartActivity",main.processBA,(Object)((main.mostCurrent._crudpaises.getObject())));
+ BA.debugLineNum = 149;BA.debugLine="End Sub";
+Debug.ShouldStop(1048576);
+return RemoteObject.createImmutable("");
+}
+catch (Exception e) {
+			throw Debug.ErrorCaught(e);
+		} 
+finally {
+			Debug.PopSubsStack();
+		}}
 public static RemoteObject  _getabilities(RemoteObject _table) throws Exception{
 try {
 		Debug.PushSubsStack("GetAbilities (main) ","main",0,main.mostCurrent.activityBA,main.mostCurrent,92);
@@ -697,6 +716,7 @@ public static void initializeProcessGlobals() {
 		try {
 		        main_subs_0._process_globals();
 starter_subs_0._process_globals();
+crudpaises_subs_0._process_globals();
 httputils2service_subs_0._process_globals();
 main.myClass = BA.getDeviceClass ("b4a.example.main");
 starter.myClass = BA.getDeviceClass ("b4a.example.starter");
@@ -705,6 +725,8 @@ pokemon_ditto.myClass = BA.getDeviceClass ("b4a.example.pokemon_ditto");
 ability.myClass = BA.getDeviceClass ("b4a.example.ability");
 abilityitem.myClass = BA.getDeviceClass ("b4a.example.abilityitem");
 tarea.myClass = BA.getDeviceClass ("b4a.example.tarea");
+pais.myClass = BA.getDeviceClass ("b4a.example.pais");
+crudpaises.myClass = BA.getDeviceClass ("b4a.example.crudpaises");
 httputils2service.myClass = BA.getDeviceClass ("b4a.example.httputils2service");
 httpjob.myClass = BA.getDeviceClass ("b4a.example.httpjob");
 		

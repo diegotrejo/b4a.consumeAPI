@@ -1,6 +1,8 @@
 ﻿Build1=Default,b4a.example
-File1=Layout.bal
+File1=CrudPaises.bal
+File2=Layout.bal
 FileGroup1=Default Group
+FileGroup2=Default Group
 Group=Default Group
 Library1=core
 Library2=okhttp
@@ -10,13 +12,15 @@ Library5=json
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="31"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
 Module1=ability
 Module2=abilityItem
-Module3=form
-Module4=pokemon_ditto
-Module5=Starter
-Module6=Tarea
-NumberOfFiles=1
+Module3=CrudPaises
+Module4=form
+Module5=Pais
+Module6=pokemon_ditto
+Module7=Starter
+Module8=Tarea
+NumberOfFiles=2
 NumberOfLibraries=5
-NumberOfModules=6
+NumberOfModules=8
 Version=12.2
 @EndOfDesignText@
 #Region  Project Attributes 
@@ -163,4 +167,8 @@ Private Sub GetTareas( tabla As List) As List
 		lst.Add(t)
 	Next
 	Return lst
+End Sub
+
+Private Sub Button3_Click
+	StartActivity( CrudPaises)
 End Sub

@@ -52,7 +52,8 @@ public static RemoteObject _tempfolder = RemoteObject.createImmutable("");
 public static RemoteObject _taskcounter = RemoteObject.createImmutable(0);
 public static b4a.example.main _main = null;
 public static b4a.example.starter _starter = null;
+public static b4a.example.crudpaises _crudpaises = null;
   public Object[] GetGlobals() {
-		return new Object[] {"hc",httputils2service._hc,"Main",Debug.moduleToString(b4a.example.main.class),"Service",httputils2service.mostCurrent._service,"Starter",Debug.moduleToString(b4a.example.starter.class),"taskCounter",httputils2service._taskcounter,"TaskIdToJob",httputils2service._taskidtojob,"TempFolder",httputils2service._tempfolder};
+		return new Object[] {"CrudPaises",Debug.moduleToString(b4a.example.crudpaises.class),"hc",httputils2service._hc,"Main",Debug.moduleToString(b4a.example.main.class),"Service",httputils2service.mostCurrent._service,"Starter",Debug.moduleToString(b4a.example.starter.class),"taskCounter",httputils2service._taskcounter,"TaskIdToJob",httputils2service._taskidtojob,"TempFolder",httputils2service._tempfolder};
 }
 }

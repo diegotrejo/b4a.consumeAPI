@@ -36,6 +36,7 @@ public boolean _is_hidden = false;
 public int _slot = 0;
 public b4a.example.main _main = null;
 public b4a.example.starter _starter = null;
+public b4a.example.crudpaises _crudpaises = null;
 public b4a.example.httputils2service _httputils2service = null;
 public String  _initialize(b4a.example.abilityitem __ref,anywheresoftware.b4a.BA _ba) throws Exception{
 __ref = this;
@@ -43,28 +44,28 @@ innerInitialize(_ba);
 RDebugUtils.currentModule="abilityitem";
 if (Debug.shouldDelegate(ba, "initialize", false))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba}));}
-RDebugUtils.currentLine=1376256;
- //BA.debugLineNum = 1376256;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=1376258;
- //BA.debugLineNum = 1376258;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1507328;
+ //BA.debugLineNum = 1507328;BA.debugLine="Public Sub Initialize";
+RDebugUtils.currentLine=1507330;
+ //BA.debugLineNum = 1507330;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals(b4a.example.abilityitem __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="abilityitem";
-RDebugUtils.currentLine=1310720;
- //BA.debugLineNum = 1310720;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=1310721;
- //BA.debugLineNum = 1310721;BA.debugLine="Public ability As ability";
+RDebugUtils.currentLine=1441792;
+ //BA.debugLineNum = 1441792;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=1441793;
+ //BA.debugLineNum = 1441793;BA.debugLine="Public ability As ability";
 _ability = new b4a.example.ability();
-RDebugUtils.currentLine=1310722;
- //BA.debugLineNum = 1310722;BA.debugLine="Public is_hidden As Boolean";
+RDebugUtils.currentLine=1441794;
+ //BA.debugLineNum = 1441794;BA.debugLine="Public is_hidden As Boolean";
 _is_hidden = false;
-RDebugUtils.currentLine=1310723;
- //BA.debugLineNum = 1310723;BA.debugLine="Public slot As Int";
+RDebugUtils.currentLine=1441795;
+ //BA.debugLineNum = 1441795;BA.debugLine="Public slot As Int";
 _slot = 0;
-RDebugUtils.currentLine=1310724;
- //BA.debugLineNum = 1310724;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1441796;
+ //BA.debugLineNum = 1441796;BA.debugLine="End Sub";
 return "";
 }
 }

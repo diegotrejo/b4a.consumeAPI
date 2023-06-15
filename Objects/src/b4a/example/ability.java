@@ -35,6 +35,7 @@ public String _name = "";
 public String _url = "";
 public b4a.example.main _main = null;
 public b4a.example.starter _starter = null;
+public b4a.example.crudpaises _crudpaises = null;
 public b4a.example.httputils2service _httputils2service = null;
 public String  _initialize(b4a.example.ability __ref,anywheresoftware.b4a.BA _ba) throws Exception{
 __ref = this;
@@ -42,25 +43,25 @@ innerInitialize(_ba);
 RDebugUtils.currentModule="ability";
 if (Debug.shouldDelegate(ba, "initialize", false))
 	 {return ((String) Debug.delegate(ba, "initialize", new Object[] {_ba}));}
-RDebugUtils.currentLine=1245184;
- //BA.debugLineNum = 1245184;BA.debugLine="Public Sub Initialize";
-RDebugUtils.currentLine=1245186;
- //BA.debugLineNum = 1245186;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1376256;
+ //BA.debugLineNum = 1376256;BA.debugLine="Public Sub Initialize";
+RDebugUtils.currentLine=1376258;
+ //BA.debugLineNum = 1376258;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals(b4a.example.ability __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="ability";
-RDebugUtils.currentLine=1179648;
- //BA.debugLineNum = 1179648;BA.debugLine="Sub Class_Globals";
-RDebugUtils.currentLine=1179649;
- //BA.debugLineNum = 1179649;BA.debugLine="Public name As String";
+RDebugUtils.currentLine=1310720;
+ //BA.debugLineNum = 1310720;BA.debugLine="Sub Class_Globals";
+RDebugUtils.currentLine=1310721;
+ //BA.debugLineNum = 1310721;BA.debugLine="Public name As String";
 _name = "";
-RDebugUtils.currentLine=1179650;
- //BA.debugLineNum = 1179650;BA.debugLine="Public url As String";
+RDebugUtils.currentLine=1310722;
+ //BA.debugLineNum = 1310722;BA.debugLine="Public url As String";
 _url = "";
-RDebugUtils.currentLine=1179651;
- //BA.debugLineNum = 1179651;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1310723;
+ //BA.debugLineNum = 1310723;BA.debugLine="End Sub";
 return "";
 }
 }

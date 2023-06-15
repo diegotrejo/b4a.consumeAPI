@@ -17,6 +17,7 @@ public static RemoteObject _title = RemoteObject.createImmutable("");
 public static RemoteObject _completed = RemoteObject.createImmutable(false);
 public static b4a.example.main _main = null;
 public static b4a.example.starter _starter = null;
+public static b4a.example.crudpaises _crudpaises = null;
 public static b4a.example.httputils2service _httputils2service = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"completed",_ref.getField(false, "_completed"),"id",_ref.getField(false, "_id"),"title",_ref.getField(false, "_title"),"userId",_ref.getField(false, "_userid")};

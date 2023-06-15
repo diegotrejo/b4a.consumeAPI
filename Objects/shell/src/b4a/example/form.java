@@ -15,6 +15,7 @@ public static RemoteObject _name = RemoteObject.createImmutable("");
 public static RemoteObject _url = RemoteObject.createImmutable("");
 public static b4a.example.main _main = null;
 public static b4a.example.starter _starter = null;
+public static b4a.example.crudpaises _crudpaises = null;
 public static b4a.example.httputils2service _httputils2service = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {"name",_ref.getField(false, "_name"),"url",_ref.getField(false, "_url")};

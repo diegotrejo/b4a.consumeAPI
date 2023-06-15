@@ -57,8 +57,9 @@ public boolean isSingleton() {
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static RemoteObject _xui = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper.XUI");
 public static b4a.example.starter _starter = null;
+public static b4a.example.crudpaises _crudpaises = null;
 public static b4a.example.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",main.mostCurrent._activity,"HttpUtils2Service",Debug.moduleToString(b4a.example.httputils2service.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"xui",main._xui};
+		return new Object[] {"Activity",main.mostCurrent._activity,"CrudPaises",Debug.moduleToString(b4a.example.crudpaises.class),"HttpUtils2Service",Debug.moduleToString(b4a.example.httputils2service.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"xui",main._xui};
 }
 }

@@ -351,6 +351,7 @@ public static void initializeProcessGlobals() {
 public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
+vis = vis | (crudpaises.mostCurrent != null);
 return vis;}
 
 private static BA killProgramHelper(BA ba) {
@@ -375,11 +376,24 @@ public static void killProgram() {
 				__a.finish();}
 
 BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
+ {
+            Activity __a = null;
+            if (crudpaises.previousOne != null) {
+				__a = crudpaises.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(crudpaises.mostCurrent == null ? null : crudpaises.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
 BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, httputils2service.class));
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.B4XViewWrapper.XUI _xui = null;
 public b4a.example.starter _starter = null;
+public b4a.example.crudpaises _crudpaises = null;
 public b4a.example.httputils2service _httputils2service = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="main";
@@ -491,7 +505,7 @@ case 3:
 this.state = 4;
 RDebugUtils.currentLine=327689;
  //BA.debugLineNum = 327689;BA.debugLine="Log( j1.GetString)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3327689",_j1._getstring /*String*/ (null),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("5327689",_j1._getstring /*String*/ (null),0);
 RDebugUtils.currentLine=327690;
  //BA.debugLineNum = 327690;BA.debugLine="Dim json As String = j1.GetString";
 _json = _j1._getstring /*String*/ (null);
@@ -525,10 +539,10 @@ RDebugUtils.currentLine=327701;
 _res._abilities /*anywheresoftware.b4a.objects.collections.List*/  = _getabilities((anywheresoftware.b4a.objects.collections.List) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.List(), (java.util.List)(_map.Get((Object)("abilities")))));
 RDebugUtils.currentLine=327703;
  //BA.debugLineNum = 327703;BA.debugLine="Log(res.base_experience)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3327703",BA.NumberToString(_res._base_experience /*int*/ ),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("5327703",BA.NumberToString(_res._base_experience /*int*/ ),0);
 RDebugUtils.currentLine=327704;
  //BA.debugLineNum = 327704;BA.debugLine="Log(res.height)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3327704",BA.NumberToString(_res._height /*int*/ ),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("5327704",BA.NumberToString(_res._height /*int*/ ),0);
 RDebugUtils.currentLine=327705;
  //BA.debugLineNum = 327705;BA.debugLine="For Each f As form In res.forms";
 if (true) break;
@@ -561,10 +575,10 @@ case 6:
 this.state = 16;
 RDebugUtils.currentLine=327706;
  //BA.debugLineNum = 327706;BA.debugLine="Log(\"     \" & f.name)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3327706","     "+_f._name /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("5327706","     "+_f._name /*String*/ ,0);
 RDebugUtils.currentLine=327707;
  //BA.debugLineNum = 327707;BA.debugLine="Log(\"     \" & f.url)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3327707","     "+_f._url /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("5327707","     "+_f._url /*String*/ ,0);
  if (true) break;
 if (true) break;
 ;
@@ -599,16 +613,16 @@ case 9:
 this.state = 18;
 RDebugUtils.currentLine=327710;
  //BA.debugLineNum = 327710;BA.debugLine="Log(\"     \" & a.is_hidden)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3327710","     "+BA.ObjectToString(_a._is_hidden /*boolean*/ ),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("5327710","     "+BA.ObjectToString(_a._is_hidden /*boolean*/ ),0);
 RDebugUtils.currentLine=327711;
  //BA.debugLineNum = 327711;BA.debugLine="Log(\"     \" & a.slot)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3327711","     "+BA.NumberToString(_a._slot /*int*/ ),0);
+anywheresoftware.b4a.keywords.Common.LogImpl("5327711","     "+BA.NumberToString(_a._slot /*int*/ ),0);
 RDebugUtils.currentLine=327712;
  //BA.debugLineNum = 327712;BA.debugLine="Log(\"     \" & a.ability.name)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3327712","     "+_a._ability /*b4a.example.ability*/ ._name /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("5327712","     "+_a._ability /*b4a.example.ability*/ ._name /*String*/ ,0);
 RDebugUtils.currentLine=327713;
  //BA.debugLineNum = 327713;BA.debugLine="Log(\"     \" & a.ability.url)";
-anywheresoftware.b4a.keywords.Common.LogImpl("3327713","     "+_a._ability /*b4a.example.ability*/ ._url /*String*/ ,0);
+anywheresoftware.b4a.keywords.Common.LogImpl("5327713","     "+_a._ability /*b4a.example.ability*/ ._url /*String*/ ,0);
  if (true) break;
 if (true) break;
 
@@ -791,17 +805,17 @@ return;
 case 0:
 //C
 this.state = 1;
-RDebugUtils.currentLine=3801089;
- //BA.debugLineNum = 3801089;BA.debugLine="Dim j As HttpJob";
+RDebugUtils.currentLine=524289;
+ //BA.debugLineNum = 524289;BA.debugLine="Dim j As HttpJob";
 _j = new b4a.example.httpjob();
-RDebugUtils.currentLine=3801090;
- //BA.debugLineNum = 3801090;BA.debugLine="j.Initialize(\"\", Me)";
+RDebugUtils.currentLine=524290;
+ //BA.debugLineNum = 524290;BA.debugLine="j.Initialize(\"\", Me)";
 _j._initialize /*String*/ (null,processBA,"",main.getObject());
-RDebugUtils.currentLine=3801092;
- //BA.debugLineNum = 3801092;BA.debugLine="j.Download(\"https://jsonplaceholder.typicode.com/";
+RDebugUtils.currentLine=524292;
+ //BA.debugLineNum = 524292;BA.debugLine="j.Download(\"https://jsonplaceholder.typicode.com/";
 _j._download /*String*/ (null,"https://jsonplaceholder.typicode.com/todos");
-RDebugUtils.currentLine=3801093;
- //BA.debugLineNum = 3801093;BA.debugLine="Wait For (j) JobDone( respuesta As HttpJob)";
+RDebugUtils.currentLine=524293;
+ //BA.debugLineNum = 524293;BA.debugLine="Wait For (j) JobDone( respuesta As HttpJob)";
 anywheresoftware.b4a.keywords.Common.WaitFor("jobdone", processBA, new anywheresoftware.b4a.shell.DebugResumableSub.DelegatableResumableSub(this, "main", "button2_click"), (Object)(_j));
 this.state = 11;
 return;
@@ -810,8 +824,8 @@ case 11:
 this.state = 1;
 _respuesta = (b4a.example.httpjob) result[0];
 ;
-RDebugUtils.currentLine=3801094;
- //BA.debugLineNum = 3801094;BA.debugLine="If respuesta.Success Then";
+RDebugUtils.currentLine=524294;
+ //BA.debugLineNum = 524294;BA.debugLine="If respuesta.Success Then";
 if (true) break;
 
 case 1:
@@ -826,24 +840,24 @@ this.state = 9;
 case 3:
 //C
 this.state = 4;
-RDebugUtils.currentLine=3801095;
- //BA.debugLineNum = 3801095;BA.debugLine="Log( respuesta.GetString)";
-anywheresoftware.b4a.keywords.Common.LogImpl("33801095",_respuesta._getstring /*String*/ (null),0);
-RDebugUtils.currentLine=3801096;
- //BA.debugLineNum = 3801096;BA.debugLine="Dim json As String = respuesta.GetString";
+RDebugUtils.currentLine=524295;
+ //BA.debugLineNum = 524295;BA.debugLine="Log( respuesta.GetString)";
+anywheresoftware.b4a.keywords.Common.LogImpl("5524295",_respuesta._getstring /*String*/ (null),0);
+RDebugUtils.currentLine=524296;
+ //BA.debugLineNum = 524296;BA.debugLine="Dim json As String = respuesta.GetString";
 _json = _respuesta._getstring /*String*/ (null);
-RDebugUtils.currentLine=3801097;
- //BA.debugLineNum = 3801097;BA.debugLine="Dim jsonParser As JSONParser";
+RDebugUtils.currentLine=524297;
+ //BA.debugLineNum = 524297;BA.debugLine="Dim jsonParser As JSONParser";
 _jsonparser = new anywheresoftware.b4a.objects.collections.JSONParser();
-RDebugUtils.currentLine=3801098;
- //BA.debugLineNum = 3801098;BA.debugLine="jsonParser.Initialize(json)";
+RDebugUtils.currentLine=524298;
+ //BA.debugLineNum = 524298;BA.debugLine="jsonParser.Initialize(json)";
 _jsonparser.Initialize(_json);
-RDebugUtils.currentLine=3801100;
- //BA.debugLineNum = 3801100;BA.debugLine="Dim datos As List = GetTareas( jsonParser.NextAr";
+RDebugUtils.currentLine=524300;
+ //BA.debugLineNum = 524300;BA.debugLine="Dim datos As List = GetTareas( jsonParser.NextAr";
 _datos = new anywheresoftware.b4a.objects.collections.List();
 _datos = _gettareas(_jsonparser.NextArray());
-RDebugUtils.currentLine=3801101;
- //BA.debugLineNum = 3801101;BA.debugLine="For Each t As Tarea In datos";
+RDebugUtils.currentLine=524301;
+ //BA.debugLineNum = 524301;BA.debugLine="For Each t As Tarea In datos";
 if (true) break;
 
 case 4:
@@ -872,15 +886,15 @@ if (true) break;
 case 6:
 //C
 this.state = 13;
-RDebugUtils.currentLine=3801102;
- //BA.debugLineNum = 3801102;BA.debugLine="Log( t.title)";
-anywheresoftware.b4a.keywords.Common.LogImpl("33801102",_t._title /*String*/ ,0);
-RDebugUtils.currentLine=3801103;
- //BA.debugLineNum = 3801103;BA.debugLine="Log( t.userId )";
-anywheresoftware.b4a.keywords.Common.LogImpl("33801103",BA.NumberToString(_t._userid /*int*/ ),0);
-RDebugUtils.currentLine=3801104;
- //BA.debugLineNum = 3801104;BA.debugLine="Log( t.completed )";
-anywheresoftware.b4a.keywords.Common.LogImpl("33801104",BA.ObjectToString(_t._completed /*boolean*/ ),0);
+RDebugUtils.currentLine=524302;
+ //BA.debugLineNum = 524302;BA.debugLine="Log( t.title)";
+anywheresoftware.b4a.keywords.Common.LogImpl("5524302",_t._title /*String*/ ,0);
+RDebugUtils.currentLine=524303;
+ //BA.debugLineNum = 524303;BA.debugLine="Log( t.userId )";
+anywheresoftware.b4a.keywords.Common.LogImpl("5524303",BA.NumberToString(_t._userid /*int*/ ),0);
+RDebugUtils.currentLine=524304;
+ //BA.debugLineNum = 524304;BA.debugLine="Log( t.completed )";
+anywheresoftware.b4a.keywords.Common.LogImpl("5524304",BA.ObjectToString(_t._completed /*boolean*/ ),0);
  if (true) break;
 if (true) break;
 
@@ -893,8 +907,8 @@ this.state = 10;
 case 9:
 //C
 this.state = 10;
-RDebugUtils.currentLine=3801107;
- //BA.debugLineNum = 3801107;BA.debugLine="xui.MsgboxAsync(respuesta.ErrorMessage, \"Sucedio";
+RDebugUtils.currentLine=524307;
+ //BA.debugLineNum = 524307;BA.debugLine="xui.MsgboxAsync(respuesta.ErrorMessage, \"Sucedio";
 parent._xui.MsgboxAsync(processBA,BA.ObjectToCharSequence(_respuesta._errormessage /*String*/ ),BA.ObjectToCharSequence("Sucedio un error"));
  if (true) break;
 
@@ -902,8 +916,8 @@ case 10:
 //C
 this.state = -1;
 ;
-RDebugUtils.currentLine=3801109;
- //BA.debugLineNum = 3801109;BA.debugLine="End Sub";
+RDebugUtils.currentLine=524309;
+ //BA.debugLineNum = 524309;BA.debugLine="End Sub";
 if (true) break;
 
             }
@@ -918,55 +932,68 @@ anywheresoftware.b4a.objects.collections.List _lst = null;
 anywheresoftware.b4a.objects.collections.Map _m = null;
 int _i = 0;
 b4a.example.tarea _t = null;
-RDebugUtils.currentLine=4587520;
- //BA.debugLineNum = 4587520;BA.debugLine="Private Sub GetTareas( tabla As List) As List";
-RDebugUtils.currentLine=4587521;
- //BA.debugLineNum = 4587521;BA.debugLine="Dim lst As List : lst.initialize";
+RDebugUtils.currentLine=589824;
+ //BA.debugLineNum = 589824;BA.debugLine="Private Sub GetTareas( tabla As List) As List";
+RDebugUtils.currentLine=589825;
+ //BA.debugLineNum = 589825;BA.debugLine="Dim lst As List : lst.initialize";
 _lst = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=4587521;
- //BA.debugLineNum = 4587521;BA.debugLine="Dim lst As List : lst.initialize";
+RDebugUtils.currentLine=589825;
+ //BA.debugLineNum = 589825;BA.debugLine="Dim lst As List : lst.initialize";
 _lst.Initialize();
-RDebugUtils.currentLine=4587522;
- //BA.debugLineNum = 4587522;BA.debugLine="Dim m As Map";
+RDebugUtils.currentLine=589826;
+ //BA.debugLineNum = 589826;BA.debugLine="Dim m As Map";
 _m = new anywheresoftware.b4a.objects.collections.Map();
-RDebugUtils.currentLine=4587523;
- //BA.debugLineNum = 4587523;BA.debugLine="For i = 0 To tabla.Size -1";
+RDebugUtils.currentLine=589827;
+ //BA.debugLineNum = 589827;BA.debugLine="For i = 0 To tabla.Size -1";
 {
 final int step4 = 1;
 final int limit4 = (int) (_tabla.getSize()-1);
 _i = (int) (0) ;
 for (;_i <= limit4 ;_i = _i + step4 ) {
-RDebugUtils.currentLine=4587524;
- //BA.debugLineNum = 4587524;BA.debugLine="Dim t As Tarea : t.initialize";
+RDebugUtils.currentLine=589828;
+ //BA.debugLineNum = 589828;BA.debugLine="Dim t As Tarea : t.initialize";
 _t = new b4a.example.tarea();
-RDebugUtils.currentLine=4587524;
- //BA.debugLineNum = 4587524;BA.debugLine="Dim t As Tarea : t.initialize";
+RDebugUtils.currentLine=589828;
+ //BA.debugLineNum = 589828;BA.debugLine="Dim t As Tarea : t.initialize";
 _t._initialize /*String*/ (null,processBA);
-RDebugUtils.currentLine=4587525;
- //BA.debugLineNum = 4587525;BA.debugLine="m = tabla.Get(i)";
+RDebugUtils.currentLine=589829;
+ //BA.debugLineNum = 589829;BA.debugLine="m = tabla.Get(i)";
 _m = (anywheresoftware.b4a.objects.collections.Map) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.collections.Map(), (java.util.Map)(_tabla.Get(_i)));
-RDebugUtils.currentLine=4587526;
- //BA.debugLineNum = 4587526;BA.debugLine="t.id = m.Get(\"id\")";
+RDebugUtils.currentLine=589830;
+ //BA.debugLineNum = 589830;BA.debugLine="t.id = m.Get(\"id\")";
 _t._id /*int*/  = (int)(BA.ObjectToNumber(_m.Get((Object)("id"))));
-RDebugUtils.currentLine=4587527;
- //BA.debugLineNum = 4587527;BA.debugLine="t.userId = m.Get(\"userId\")";
+RDebugUtils.currentLine=589831;
+ //BA.debugLineNum = 589831;BA.debugLine="t.userId = m.Get(\"userId\")";
 _t._userid /*int*/  = (int)(BA.ObjectToNumber(_m.Get((Object)("userId"))));
-RDebugUtils.currentLine=4587528;
- //BA.debugLineNum = 4587528;BA.debugLine="t.title = m.Get(\"title\")";
+RDebugUtils.currentLine=589832;
+ //BA.debugLineNum = 589832;BA.debugLine="t.title = m.Get(\"title\")";
 _t._title /*String*/  = BA.ObjectToString(_m.Get((Object)("title")));
-RDebugUtils.currentLine=4587529;
- //BA.debugLineNum = 4587529;BA.debugLine="t.completed = m.Get(\"completed\")";
+RDebugUtils.currentLine=589833;
+ //BA.debugLineNum = 589833;BA.debugLine="t.completed = m.Get(\"completed\")";
 _t._completed /*boolean*/  = BA.ObjectToBoolean(_m.Get((Object)("completed")));
-RDebugUtils.currentLine=4587530;
- //BA.debugLineNum = 4587530;BA.debugLine="lst.Add(t)";
+RDebugUtils.currentLine=589834;
+ //BA.debugLineNum = 589834;BA.debugLine="lst.Add(t)";
 _lst.Add((Object)(_t));
  }
 };
-RDebugUtils.currentLine=4587532;
- //BA.debugLineNum = 4587532;BA.debugLine="Return lst";
+RDebugUtils.currentLine=589836;
+ //BA.debugLineNum = 589836;BA.debugLine="Return lst";
 if (true) return _lst;
-RDebugUtils.currentLine=4587533;
- //BA.debugLineNum = 4587533;BA.debugLine="End Sub";
+RDebugUtils.currentLine=589837;
+ //BA.debugLineNum = 589837;BA.debugLine="End Sub";
 return null;
+}
+public static String  _button3_click() throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "button3_click", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "button3_click", null));}
+RDebugUtils.currentLine=5308416;
+ //BA.debugLineNum = 5308416;BA.debugLine="Private Sub Button3_Click";
+RDebugUtils.currentLine=5308417;
+ //BA.debugLineNum = 5308417;BA.debugLine="StartActivity( CrudPaises)";
+anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._crudpaises.getObject()));
+RDebugUtils.currentLine=5308418;
+ //BA.debugLineNum = 5308418;BA.debugLine="End Sub";
+return "";
 }
 }
